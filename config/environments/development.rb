@@ -36,4 +36,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  APP_CONFIG = YAML.load_file("#{Rails.root}/config/config.yml")
 end

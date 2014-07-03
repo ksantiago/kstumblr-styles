@@ -1,4 +1,4 @@
-<h1>Listing posts</h1>
+<h1 class="blog-post">BLOG</h1>
 
 <!-- <table>
   <thead>
@@ -10,16 +10,19 @@
   </thead>
 
   <tbody> -->
+    <div class="blog-post">
     <% @posts.each do |post| %>
       <!-- <tr> -->
-        <p><%= link_to "#{post.title}", post %><br>
-        <%= post.created_at %><br>
-        <%= post.content.html_safe %></p>
+        <h2><%= link_to "#{post.title}", post %></h2>
+        <strong>Published: </strong><%= post.created_at.to_date.to_formatted_s(:long) %><br>
+       <p><% truncate("#{post.content.html_safe}", length: 20, omission: "... (continued)")%></p>
+        <hr>
         <%#= link_to 'Show', post %>
         <%#= link_to 'Edit', edit_post_path(post) %>
         <%#= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
       <!-- </tr> -->
     <% end %>
+    </div>
 <!--   </tbody>
 </table>
  -->

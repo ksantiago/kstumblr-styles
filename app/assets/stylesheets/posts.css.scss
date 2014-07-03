@@ -1,3 +1,25 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blog-post h1 {
+  margin-left: 110px;
+}
+
+.blog-post h2 {
+  line-height: 1.2em;
+}
+
+.blog-post {
+  width: 600px;
+  margin-left: 100px;
+}
+
+.blog-post a, .blog-post a:visited {
+  text-decoration: none;
+}
+
+.blog-post hr {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
