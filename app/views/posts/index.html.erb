@@ -1,3 +1,40 @@
+<div class="container">
+
+
+<h2><a href="http://google.com" class="google">i want to google</a></h2>
+
+<style type="text/css">
+.tftable {font-size:12px;color:#333333;width:100%;border-width: 1px;border-color: #729ea5;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable tr {background-color:#d4e3e5;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;}
+.tftable tr:hover {background-color:#ffffff;}
+</style>
+
+<table border="1" class="fun">
+<tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr>
+<tr><td class="col-one">Row:1 Cell:1</td><td>Row:1 Cell:2</td><td>Row:1 Cell:3</td><td>Row:1 Cell:4</td><td>Row:1 Cell:5</td></tr>
+<tr><td class="col-one">Row:2 Cell:1</td><td>Row:2 Cell:2</td><td>Row:2 Cell:3</td><td>Row:2 Cell:4</td><td>Row:2 Cell:5</td></tr>
+<tr><td class="col-one">Row:3 Cell:1</td><td>Row:3 Cell:2</td><td>Row:3 Cell:3</td><td>Row:3 Cell:4</td><td>Row:3 Cell:5</td></tr>
+<tr><td class="col-one">Row:4 Cell:1</td><td>Row:4 Cell:2</td><td>Row:4 Cell:3</td><td>Row:4 Cell:4</td><td>Row:4 Cell:5</td></tr>
+<tr><td class="col-one">Row:5 Cell:1</td><td>Row:5 Cell:2</td><td>Row:5 Cell:3</td><td>Row:5 Cell:4</td><td>Row:5 Cell:5</td></tr>
+<tr><td class="col-one">Row:6 Cell:1</td><td>Row:6 Cell:2</td><td>Row:6 Cell:3</td><td>Row:6 Cell:4</td><td>Row:6 Cell:5</td></tr>
+</table>
+
+
+<h2><a href="http://yahoo.com" class="google">I want to Yahoo</a></h2>
+
+
+<div class="one">One
+</div>
+<div class="two">Two
+</div>
+<div class="three">Three</div>
+
+
+
+
+
 <h1 class="blog-post">BLOG</h1>
 
 <!-- <table>
@@ -8,14 +45,15 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody> -->
+
     <div class="blog-post">
     <% @posts.each do |post| %>
       <!-- <tr> -->
         <h2><%= link_to "#{post.title}", post %></h2>
+
         <strong>Published: </strong><%= post.created_at.to_date.to_formatted_s(:long) %><br>
-        <%= post.content.html_safe %></p>
+        <p><a href="http://google.com"><%= post.content.html_safe %></a></p>
         <hr>
         <%#= link_to 'Show', post %>
         <%#= link_to 'Edit', edit_post_path(post) %>
@@ -23,6 +61,7 @@
       <!-- </tr> -->
     <% end %>
     </div>
+</div>
 <!--   </tbody>
 </table>
  -->
