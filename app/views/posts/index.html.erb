@@ -15,7 +15,7 @@
       <!-- <tr> -->
         <h2><%= link_to "#{post.title}", post %></h2>
         <strong>Published: </strong><%= post.created_at.to_date.to_formatted_s(:long) %><br>
-       <p><% truncate("#{post.content.html_safe}", length: 20, omission: "... (continued)")%></p>
+        <%= post.content.html_safe %></p>
         <hr>
         <%#= link_to 'Show', post %>
         <%#= link_to 'Edit', edit_post_path(post) %>
